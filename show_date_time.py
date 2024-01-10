@@ -21,10 +21,10 @@ while (cap.isOpened()):
         date = str(datetime.datetime.now())
         #frame = cv2.putText(frame, text,(10,50), font , 1 ,(0,255,255) , 2 , cv2.LINE_AA )  
 
-        frame = cv2.putText(frame, date , (10,50) , font , 1 ,(0,255,255) , 2 , cv2.LINE_AA ) 
+        frame = cv2.putText(frame, date , (10,50) , font , 1 , (0,255,255) , 2 , cv2.LINE_AA ) 
 
-        cv2.imshow("Preview_window", frame)
-        if cv2.waitKey() & 0xff == ord('q'):
+        cv2.imshow("frame", frame)
+        if cv2.waitKey(1) & 0xff == ord('q'):
             break
     else:
         break
